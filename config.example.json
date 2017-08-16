@@ -1,0 +1,8 @@
+{
+	"send_message": true,
+	"message_to": "steam id to be messaged when we get a donation",
+	"bot_username": "username",
+	"bot_password": "password",
+	"bot_totp": "totp secret to generate login code",
+	"bot_online": true
+}
