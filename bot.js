@@ -2,7 +2,6 @@ const SteamUser = require("steam-user");
 const SteamTotp = require('steam-totp');
 const fs = require('fs');
 const TradeOfferManager = require('steam-tradeoffer-manager');
-const SteamCommunity = require('steamcommunity');
 var msg = '';
 
 if (fs.existsSync('./config.json')) {
@@ -18,8 +17,6 @@ const manager = new TradeOfferManager({
 	"language": "en",
 	"pollInterval": 30000
 });
-
-const community = new SteamCommunity();
 
 // Login with bot account
 client.logOn({

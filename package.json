@@ -4,11 +4,10 @@
   "description": "Get donations and donation alerts ",
   "main": "bot.js",
   "dependencies": {
-    "fs": "0.0.1-security",
-    "steam-totp": "^2.0.1",
-    "steam-tradeoffer-manager": "^2.8.1",
-    "steam-user": "^3.21.7",
-    "steamcommunity": "^3.32.1"
+    "fs": "latest",
+    "steam-totp": "latest",
+    "steam-tradeoffer-manager": "latest",
+    "steam-user": "latest"
   },
   "devDependencies": {},
   "scripts": {
