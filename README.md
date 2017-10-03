@@ -1,6 +1,14 @@
 # node-steam-donation-bot
 Get donations and donation alerts for your steam donations
 
+[![GitHub issues](https://img.shields.io/github/issues/SloRunner/node-steam-donation-bot.svg?style=plastic)](https://github.com/SloRunner/node-steam-donation-bot/issues)
+[![GitHub forks](https://img.shields.io/github/forks/SloRunner/node-steam-donation-bot.svg?style=plastic)](https://github.com/SloRunner/node-steam-donation-bot/network)
+[![GitHub stars](https://img.shields.io/github/stars/SloRunner/node-steam-donation-bot.svg?style=plastic)](https://github.com/SloRunner/node-steam-donation-bot/stargazers)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/SloRunner/node-steam-donation-bot/master/LICENSE)
+[![paypal](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.me/SloRunner)
+[![bitcoin](https://img.shields.io/badge/bitcoin-donate-yellow.svg)](https://blockchain.info/address/1ATsojTcL1xgrEMUDZMNeprZk136VtjumQ)
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+
 # Warning
 Make sure you downloaded this bot from [HERE](https://github.com/SloRunner/node-steam-donation-bot) or else i cannot guarantee integrity of the files
 
