@@ -4,5 +4,6 @@
 	"bot_username": "username",
 	"bot_password": "password",
 	"bot_totp": "totp secret to generate login code",
-	"bot_online": true
+	"bot_online": true,
+	"pollInterval": 30
 }

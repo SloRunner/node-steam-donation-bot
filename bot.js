@@ -15,7 +15,7 @@ const manager = new TradeOfferManager({
   'steam': client,
   'domain': 'localhost',
   'language': 'en',
-  'pollInterval': 30000
+  'pollInterval': config.pollInterval * 1000
 })
 
 // Login with bot account
@@ -57,7 +57,6 @@ manager.on('newOffer', function (offer) {
     offer.accept(false, function () {
       client.getPersonas([offer.partner], function (persona) {
         msg = 'Recieved: ' + recieveditems.join(', ') + ' from ' + persona[offer.partner].player_name + ' [' + offer.partner + ']'
-        console.log(msg)
         if (config.send_message === true) {
           client.chatMessage(config.message_to, msg)
         };
