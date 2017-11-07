@@ -13,6 +13,9 @@ Get donations and donation alerts for your steam donations
 # Warning
 Make sure you downloaded this bot from [HERE](https://github.com/SloRunner/node-steam-donation-bot) or else i cannot guarantee integrity of the files
 
+# Donators
+[![VIK](https://steamsignature.com/status/default/76561198343204445.png)](http://steamcommunity.com/profiles/76561198343204445)
+
 # More features?
 
 Submit an issue if you want to get something added :) i may even add it ;)
