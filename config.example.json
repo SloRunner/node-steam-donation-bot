@@ -1,9 +1,11 @@
 {
 	"send_message": true,
 	"message_to": "steam id to be messaged when we get a donation",
+	"bot_admin": "Your steamid 64",
 	"bot_username": "username",
 	"bot_password": "password",
 	"bot_totp": "totp secret to generate login code",
+	"identitySecret":"",
 	"bot_online": true,
 	"pollInterval": 30
 }

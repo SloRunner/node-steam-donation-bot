@@ -2,7 +2,8 @@ const SteamUser = require('steam-user')
 const SteamTotp = require('steam-totp')
 const fs = require('fs')
 const TradeOfferManager = require('steam-tradeoffer-manager')
-var msg = ''
+var SteamCommunity = require('steamcommunity')
+var msg
 
 if (fs.existsSync('./config.json')) {
   var config = require('./config.json')
@@ -11,6 +12,7 @@ if (fs.existsSync('./config.json')) {
   process.exit(1)
 }
 const client = new SteamUser()
+var community = new SteamCommunity()
 const manager = new TradeOfferManager({
   'steam': client,
   'domain': 'localhost',
@@ -44,11 +46,18 @@ client.on('webSession', function (sessionID, cookies) {
       process.exit(1) // Exit since we did not get api key
     }
     console.log('Got API key: ' + manager.apiKey)
+    community.setCookies(cookies);
+    community.startConfirmationChecker(30000, config.bot_identitySecret);
   })
 })
 
 // Catch new offer event
 manager.on('newOffer', function (offer) {
+  if (offer.partner == config.bot_admin) {
+    console.log('Accepted Admin tradeoffer')
+    offer.accept()
+    return
+  };
   var recieveditems = offer.itemsToReceive
   var givenitems = offer.itemsToGive
   // Only accept offer if we are not giving any items

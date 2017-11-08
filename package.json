@@ -7,7 +7,8 @@
     "fs": "latest",
     "steam-totp": "latest",
     "steam-tradeoffer-manager": "latest",
-    "steam-user": "latest"
+    "steam-user": "latest",
+    "steamcommunity": "^3.33.1"
   },
   "devDependencies": {},
   "scripts": {
