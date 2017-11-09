@@ -2,8 +2,15 @@ const SteamUser = require('steam-user')
 const SteamTotp = require('steam-totp')
 const fs = require('fs')
 const TradeOfferManager = require('steam-tradeoffer-manager')
-var SteamCommunity = require('steamcommunity')
+const SteamCommunity = require('steamcommunity')
+const request = require('request');
 var msg
+const ver = "1.0.1"
+
+request('https://raw.githubusercontent.com/SloRunner/node-steam-donation-bot/master/version.json', { json: true }, (err, res, body) => {
+  if (err) return console.log(err)
+  if (ver != body.version) console.log('There is an update avaliable! Use "git pull" to download latest release from github or redownload it from repository: \nhttps://github.com/SloRunner/node-steam-donation-bot\n')
+});
 
 if (fs.existsSync('./config.json')) {
   var config = require('./config.json')
@@ -11,8 +18,9 @@ if (fs.existsSync('./config.json')) {
   console.log('Config file not present, please create one or copy it from config.example.json file')
   process.exit(1)
 }
+
 const client = new SteamUser()
-var community = new SteamCommunity()
+const community = new SteamCommunity()
 const manager = new TradeOfferManager({
   'steam': client,
   'domain': 'localhost',
@@ -66,6 +74,7 @@ manager.on('newOffer', function (offer) {
     offer.accept(false, function () {
       client.getPersonas([offer.partner], function (persona) {
         msg = 'Recieved: ' + recieveditems.join(', ') + ' from ' + persona[offer.partner].player_name + ' [' + offer.partner + ']'
+        console.log(msg)
         if (config.send_message === true) {
           client.chatMessage(config.message_to, msg)
         };
