@@ -5,7 +5,7 @@ const TradeOfferManager = require('steam-tradeoffer-manager')
 const SteamCommunity = require('steamcommunity')
 const request = require('request');
 var msg
-const ver = "1.0.1"
+const ver = "1.0.2"
 
 request('https://raw.githubusercontent.com/SloRunner/node-steam-donation-bot/master/version.json', { json: true }, (err, res, body) => {
   if (err) return console.log(err)
