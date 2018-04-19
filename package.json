@@ -5,11 +5,11 @@
   "main": "bot.js",
   "dependencies": {
     "fs": "latest",
-    "request": "^2.83.0",
+    "request": "latest",
     "steam-totp": "latest",
     "steam-tradeoffer-manager": "latest",
     "steam-user": "latest",
-    "steamcommunity": "^3.33.1"
+    "steamcommunity": "latest"
   },
   "devDependencies": {},
   "scripts": {
